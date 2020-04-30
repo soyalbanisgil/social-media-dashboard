@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:400,700&display=swap");
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-row-gap: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  background: #f5f7ff;
+  padding: 2rem 0 6rem 0;
+}
+header h1 {
+  font-size: 1.5rem;
+}
+header p, header span {
+  font-weight: 700;
+}
+header .line {
+  background: black;
+  height: 1px;
+  margin: 1.5rem 0;
+}
+header .dark-mode {
+  display: flex;
+  align-items: center;
+}
+header .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 1rem;
+}
+header .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+header .switch input:checked + .slider {
+  background-color: black;
+}
+header .switch input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+header .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+header .switch .slider.round::before {
+  border-radius: 50%;
+}
+header .switch .slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.cards {
+  margin-top: -50px;
+}
+.cards .card {
+  background-color: #f0f2fa;
+  text-align: center;
+  border-radius: 7px;
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.cards .card:before {
+  content: "";
+  height: 0.3rem;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.cards .card:nth-child(1)::before {
+  background-color: #1690F6;
+}
+.cards .card:nth-child(2)::before {
+  background-color: #1DA2F0;
+}
+.cards .card:nth-child(3)::before {
+  background-image: linear-gradient(to right, #fdc468 0%, #df4996 100%);
+}
+.cards .card:nth-child(4)::before {
+  background-color: #c4032a;
+}
+.cards .card .username {
+  display: flex;
+  justify-content: center;
+}
+.cards .card .username span {
+  margin-left: 0.5rem;
+  font-weight: 700;
+}
+.cards .card h1 {
+  font-size: 4rem;
+  margin: 0.5rem 0 0 0;
+}
+.cards .card p {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: #63687e;
+}
+.cards .card .stats {
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+#overview {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#overview .simple-cards {
+  margin-top: 2rem;
+}
+#overview .simple-cards .simple-card {
+  background-color: #f0f2fa;
+  border-radius: 7px;
+  padding: 2rem 1.5rem;
+}
+#overview .simple-cards .simple-card .bottom {
+  margin-top: 2rem;
+  align-items: center;
+}
+#overview .simple-cards .simple-card .bottom span.number {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+#overview .simple-cards .simple-card .bottom span {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+  }
+
+  header .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .content .line {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
