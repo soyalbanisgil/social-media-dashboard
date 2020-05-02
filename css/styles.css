@@ -7,7 +7,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-;
+  transition: all 0.3s ease-in-out;
 }
 
 .wrapper {
@@ -58,7 +59,7 @@ header .switch input {
   height: 0;
 }
 header .switch input:checked + .slider {
-  background-color: black;
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
 }
 header .switch input:checked + .slider::before {
   -webkit-transform: translateX(26px);
@@ -72,7 +73,7 @@ header .switch .slider {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #aeb3cb;
   border-radius: 34px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -160,6 +161,9 @@ header .switch .slider::before {
   border-radius: 7px;
   padding: 2rem 1.5rem;
 }
+#overview .simple-cards .simple-card .top span {
+  font-weight: 700;
+}
 #overview .simple-cards .simple-card .bottom {
   margin-top: 2rem;
   align-items: center;
@@ -173,7 +177,7 @@ header .switch .slider::before {
   font-weight: 700;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1440px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
@@ -187,6 +191,27 @@ header .switch .slider::before {
   header .content .line {
     display: none;
   }
+}
+body.dark-mode {
+  background-color: #1e202a;
+}
+body.dark-mode p, body.dark-mode span {
+  color: #8b97c6;
+}
+body.dark-mode h1, body.dark-mode h2 {
+  color: #fff;
+}
+body.dark-mode header {
+  background-color: #1f212e;
+}
+body.dark-mode .card {
+  background-color: #252a41;
+}
+body.dark-mode #overview .simple-cards .simple-card {
+  background-color: #252a41;
+}
+body.dark-mode #overview .simple-cards .simple-card .bottom span.number {
+  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */

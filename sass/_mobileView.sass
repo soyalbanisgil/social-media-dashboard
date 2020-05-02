@@ -5,7 +5,8 @@ body
     margin: 0
     padding: 0
     box-sizing: border-box
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-
+    transition: all 0.3s ease-in-out
 
 .wrapper
     width: 80%
@@ -45,7 +46,7 @@ header
             width: 0
             height: 0
             &:checked + .slider
-                background-color: black
+                background-image: $toggle-dark
             &:checked + .slider::before
                 -webkit-transform: translateX(26px)
                 -ms-transform: translateX(26px)
@@ -57,7 +58,7 @@ header
             left: 0
             right: 0
             bottom: 0
-            background-color: #ccc
+            background-color: $toogle-light
             border-radius: 34px
             -webkit-transition: .4s
             transition: .4s
@@ -127,6 +128,9 @@ header
             background-color: $card-bg
             border-radius: 7px
             padding: 2rem 1.5rem
+            .top
+                span
+                    font-weight: 700
             .bottom
                 margin-top: 2rem
                 align-items: center
