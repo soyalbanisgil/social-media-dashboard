@@ -148,6 +148,12 @@ header .switch .slider::before {
   font-weight: 700;
   font-size: 0.8rem;
 }
+.cards .card .stats.up {
+  color: #34AA92;
+}
+.cards .card .stats.down {
+  color: #C1022B;
+}
 
 #overview {
   margin-top: 2rem;
